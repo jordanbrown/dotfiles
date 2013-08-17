@@ -1,6 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="jordanbrown"
-# ZSH_THEME="fino"
 DISABLE_AUTO_UPDATE="true"
 # DISABLE_LS_COLORS="true"
 
@@ -21,6 +20,7 @@ export MANPATH="/usr/local/man:/usr/local/homebrew/share/man:$MANPATH"
 
 [[ -f ~/.localrc ]] && . ~/.localrc
 
+export EDITOR='subl --wait'
 source $ZSH/oh-my-zsh.sh
 
 # for Homebrew installed rbenv

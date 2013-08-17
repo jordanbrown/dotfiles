@@ -20,7 +20,9 @@ export MANPATH="/usr/local/man:/usr/local/homebrew/share/man:$MANPATH"
 
 [[ -f ~/.localrc ]] && . ~/.localrc
 
-export EDITOR='subl --wait'
+export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+export GIT_EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
 source $ZSH/oh-my-zsh.sh
 
 # for Homebrew installed rbenv

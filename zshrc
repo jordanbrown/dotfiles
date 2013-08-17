@@ -20,8 +20,8 @@ export MANPATH="/usr/local/man:/usr/local/homebrew/share/man:$MANPATH"
 
 [[ -f ~/.localrc ]] && . ~/.localrc
 
-export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-export GIT_EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -w'
+export GIT_EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -w'
 
 source $ZSH/oh-my-zsh.sh
 

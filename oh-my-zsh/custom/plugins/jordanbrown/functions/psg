@@ -1,0 +1,5 @@
+if [ ! -z "$1" ] ; then
+  ps aux | grep -i "$1" | grep -v grep
+else
+  echo "Need a proces name to grep processes for"
+fi

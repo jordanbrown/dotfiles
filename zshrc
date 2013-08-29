@@ -31,12 +31,11 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-# Autojump
 gifify() {
   if [[ -n "$1" ]]; then
     if [[ $2 == '--good' ]]; then
       ffmpeg -i $1 -r 10 -vcodec png out-static-%05d.png
-      time convert -verbose +dither -layers Optimize -resize 600x600\> out-static*.png  GIF:- | gifsicle --colors 128 --delay=5 --loop --optimize=3 --multifile - > $1.gif
+      time convert -verbose +dither -layers Optimize -resize 891x600\> out-static*.png  GIF:- | gifsicle --colors 128 --delay=10 --loop --optimize=3 --multifile - > $1.gif
       rm out-static*.png
     else
       ffmpeg -i $1 -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $1.gif

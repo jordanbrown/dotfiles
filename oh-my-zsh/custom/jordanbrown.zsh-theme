@@ -24,40 +24,63 @@ CMD_MAX_EXEC_TIME=5
 # %m => shortname host
 # %(?..) => prompt conditional - %(condition.true.false)
 
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git # You can add hg too if needed: `git hg`
-zstyle ':vcs_info:git*' formats ' %b'
-zstyle ':vcs_info:git*' actionformats ' %b|%a'
+# fastest possible way to check if repo is dirty
+prompt_pure_git_dirty() {
+  # check if we're in a git repo
+  command git rev-parse --is-inside-work-tree &>/dev/null || return
+  # check if it's dirty
+  command git diff --quiet --ignore-submodules HEAD &>/dev/null
 
-# Only show username if not default
-[ $USER != $DEFAULT_USERNAME ] && local username='%n@%m '
-
-# Fastest possible way to check if repo is dirty
-git_dirty() {
-  git diff --quiet --ignore-submodules HEAD 2>/dev/null; [ $? -eq 1 ] && echo '*'
+  (($? == 1)) && echo '*'
 }
 
-# Displays the exec time of the last command if set threshold was exceeded
-cmd_exec_time() {
-  local stop=`date +%s`
+# displays the exec time of the last command if set threshold was exceeded
+prompt_pure_cmd_exec_time() {
+  local stop=$(date +%s)
   local start=${cmd_timestamp:-$stop}
-  let local elapsed=$stop-$start
-  [ $elapsed -gt $CMD_MAX_EXEC_TIME ] && echo ${elapsed}s
+  integer elapsed=$stop-$start
+  (($elapsed > ${PURE_CMD_MAX_EXEC_TIME:=5})) && echo ${elapsed}s
 }
 
-preexec() {
-  cmd_timestamp=`date +%s`
+prompt_pure_preexec() {
+  cmd_timestamp=$(date +%s)
+
+  # shows the current dir and executed command in the title when a process is active
+  print -Pn "\e]0;$PWD:t: $2\a"
 }
 
-precmd() {
+prompt_pure_precmd() {
+  # shows the full path in the title
+  print -Pn '\e]0;%~\a'
+
+  # git info
   vcs_info
-  # Add `%*` to display the time
-  print -P '\n%F{blue}%~%F{236}$vcs_info_msg_0_`git_dirty` $username%f %F{yellow}`cmd_exec_time`%f'
-  # Reset value since `preexec` isn't always triggered
+
+  print -P "\n%F{blue}%~%F{8}$vcs_info_msg_0_$(prompt_pure_git_dirty) $prompt_pure_username%f %F{yellow}$(prompt_pure_cmd_exec_time)%f"
+
+  # reset value since `preexec` isn't always triggered
   unset cmd_timestamp
 }
 
-# Prompt turns red if the previous command didn't exit with 0
-PROMPT='%(?.%F{magenta}.%F{red})❯%f '
-# Can be disabled:
-# PROMPT='%F{magenta}❯%f '
+
+prompt_pure_setup() {
+  prompt_opts=(cr subst percent)
+
+  autoload -Uz add-zsh-hook
+  autoload -Uz vcs_info
+
+  add-zsh-hook precmd prompt_pure_precmd
+  add-zsh-hook preexec prompt_pure_preexec
+
+  zstyle ':vcs_info:*' enable git
+  zstyle ':vcs_info:git*' formats ' %b'
+  zstyle ':vcs_info:git*' actionformats ' %b|%a'
+
+  # show username@host if logged in through SSH
+  [[ "$SSH_CONNECTION" != '' ]] && prompt_pure_username='%n@%m '
+
+  # prompt turns red if the previous command didn't exit with 0
+  PROMPT='%(?.%F{magenta}.%F{red})❯%f '
+}
+
+prompt_pure_setup "$@"

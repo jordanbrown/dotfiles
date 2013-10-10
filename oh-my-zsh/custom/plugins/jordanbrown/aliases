@@ -29,7 +29,6 @@ alias gfinish='git flow feature finish'
 # Rals
 alias tlog='tail -f log/development.log'
 
-
 # Web Shit
 alias whois="whois -h whois-servers.net"
 

@@ -63,6 +63,8 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # Xcode
 alias xcode="open *.xcodeproj"
+
+# iOS Simulator
 alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
 # One of @janmoesen’s ProTip™s

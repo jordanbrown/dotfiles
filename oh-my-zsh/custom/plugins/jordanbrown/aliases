@@ -58,8 +58,11 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
 
-#Open Apps
+# Sublime
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+# Xcode
+alias xcode="open *.xcodeproj"
 alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
 # One of @janmoesen’s ProTip™s

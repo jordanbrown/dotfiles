@@ -58,7 +58,9 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
 
+#Open Apps
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do alias "$method"="lwp-request -m '$method'"; done

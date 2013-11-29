@@ -55,6 +55,10 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
+# Hide/show all files in finder
+alias hhf="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
+alias shf="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"' >> ~/.bashrc && . ~/.bashrc'
+
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
 

@@ -60,3 +60,5 @@
 
 [ghi]
 	token = db6f41240ed09c0239eb4a48ba29699230ed7a46
+[credential]
+	helper = cache

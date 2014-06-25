@@ -31,7 +31,7 @@ alias fuck='git reset --hard head'
 alias tlog='tail -f log/development.log'
 
 # Web Shit
-alias whois="whois -h whois-servers.net"
+alias whois="iwhois"
 
 # File size
 alias fs="stat -f \"%z bytes\""

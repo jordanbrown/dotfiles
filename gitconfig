@@ -7,8 +7,8 @@
 
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  up = pull --rebase
   punch = blame
+	up = "!git remote update -p; git merge --ff-only @{u}"
 
 [color]
   diff = auto
@@ -56,9 +56,10 @@
   tool = kdiff3
 
 [heroku]
-  account = 
+  account =
 
 [ghi]
 	token = db6f41240ed09c0239eb4a48ba29699230ed7a46
+
 [credential]
 	helper = cache

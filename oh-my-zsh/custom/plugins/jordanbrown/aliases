@@ -1,5 +1,5 @@
 # misc
-alias reload='exec $SHELL -l'
+alias reload='exec $SHELL -l && source ~/.zshrc'
 alias cl='clear'
 
 # cd
@@ -15,8 +15,8 @@ alias ll="gls -l --color"
 alias la='gls -A --color'
 
 # git
-alias ga='git add'
-alias gull='git pull'
+alias ga='git add --all'
+alias gull='git remote update -p; git merge --ff-only @{u}'
 alias gush='git push'
 alias gc='git commit'
 alias gm='git merge'
@@ -25,6 +25,7 @@ alias gs='git status'
 alias undopush='git push -f origin HEAD^:master'
 alias gstart='git flow feature start'
 alias gfinish='git flow feature finish'
+alias fuck='git reset --hard head'
 
 # Rals
 alias tlog='tail -f log/development.log'

@@ -4,7 +4,7 @@ DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(atom git git-remote-branch osx jordanbrown zsh-syntax-highlighting)
+plugins=(iwhois atom git git-remote-branch osx jordanbrown zsh-syntax-highlighting)
 
 [[ -f ~/.localrc ]] && . ~/.localrc
 

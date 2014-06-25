@@ -16,3 +16,7 @@
   'disabledPackages': [
     'wrap-guide'
   ]
+'autosave': {}
+'atom-spotify':
+  'showEqualizer': true
+'autocomplete-plus': {}

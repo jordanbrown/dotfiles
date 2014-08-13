@@ -1,7 +1,7 @@
 {
   "name": "set-syntax",
   "main": "./lib/main",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Creates easy Command Palette commands for setting the syntax of the current file",
   "repository": {
     "type": "git",
@@ -18,10 +18,10 @@
     "url": "https://github.com/lee-dohm/set-syntax/issues"
   },
   "homepage": "https://github.com/lee-dohm/set-syntax",
-  "_id": "set-syntax@0.0.2",
+  "_id": "set-syntax@0.1.0",
   "dist": {
-    "shasum": "f606b0e30f1925101cc2cc62bcf5a9e298b4b0cb"
+    "shasum": "ffad5a9750d57930f9b93d47bc5e8b41dfc36b9a"
   },
-  "_resolved": "/var/folders/gc/vy956zrs6m7_vw6xvft97bkw0000gn/T/d-114525-5019-117ml89/package.tgz",
-  "_from": "/var/folders/gc/vy956zrs6m7_vw6xvft97bkw0000gn/T/d-114525-5019-117ml89/package.tgz"
+  "_resolved": "/var/folders/gc/vy956zrs6m7_vw6xvft97bkw0000gn/T/d-11472-3099-2wuhj/package.tgz",
+  "_from": "/var/folders/gc/vy956zrs6m7_vw6xvft97bkw0000gn/T/d-11472-3099-2wuhj/package.tgz"
 }

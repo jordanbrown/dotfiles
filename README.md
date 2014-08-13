@@ -1,1 +1,1 @@
-Symlink all the things
+stay hungry, stay foolish

@@ -28,6 +28,23 @@ alias gstart='git flow feature start'
 alias gfinish='git flow feature finish'
 alias gfuck='git reset --hard head'
 
+alias gissue='gh is'
+alias gisdeets='gh is --list --detailed'
+alias gisfeat='gh is --list --label feature'
+alias gisbug='gh is --list --label bug'
+alias gisproto='gh is --list --label prototype'
+alias gisfuckoff='gh is --list --label wontfix'
+alias gishelp='gh is --list --label help'
+alias gisstarted='gh is --list --label started'
+alias gissues='gh is --list --state open'
+alias gisrepo='gh is --list --user jordanbrown --repo'
+alias gmile='gh is --list --milestone'
+alias gismine='gh is --list --assignee jordanbrown'
+alias gnotifs='gh nt --latest --user jordanbrown'
+
+
+alias fuckoffdd='cd '/Users/Jordan/Library/Developer/Xcode/DerivedData/ModuleCache/' && rm -rf *'
+
 # Rals
 alias tlog='tail -f log/development.log'
 

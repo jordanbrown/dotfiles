@@ -1,0 +1,29 @@
+{
+  "name": "html-entities",
+  "version": "0.2.0",
+  "main": "./lib/html-entities",
+  "description": "Encode and decode HTML entities",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbeEstrada/atom-html-entities"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "entities": "^1.0.0"
+  },
+  "readme": "# HTML Entities\n\nEncode and decode HTML entities from selected text or the current document.\n\n![Screenshot](https://f.cloud.github.com/assets/7937/2394928/0d5a0b98-a9c0-11e3-9126-b6ce7c76cef0.gif)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/AbeEstrada/atom-html-entities/issues"
+  },
+  "homepage": "https://github.com/AbeEstrada/atom-html-entities",
+  "_id": "html-entities@0.2.0",
+  "dist": {
+    "shasum": "bc6b082db17d4636502aab6c58a4bf3a0cd79e63"
+  },
+  "_resolved": "/var/folders/gc/vy956zrs6m7_vw6xvft97bkw0000gn/T/d-114712-39497-vsu5ll/package.tgz",
+  "_from": "/var/folders/gc/vy956zrs6m7_vw6xvft97bkw0000gn/T/d-114712-39497-vsu5ll/package.tgz"
+}

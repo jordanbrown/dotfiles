@@ -1,0 +1,27 @@
+{
+  "name": "html-helper",
+  "main": "./lib/html-helper",
+  "version": "0.2.3",
+  "description": "Helps complete your HTML tags.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j4ys0n/atom-html-helper"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "readme": "# HTML Helper package\n\nInitial version. I missed this feature when switching from SublimeText, so I made it a package. This adds the ability to complete HTML tags by pressing \"cmd-opt-.\" This package also has the ability to close tags within the line you are on if an open tag is detected but not a close tag.\n\nCurrently, this only evaluates the line that the cursor is on.\n\nNext steps will include multi-line evaluation, better handling of specific elements.\n\nPlace this in your Atom packages directory: ~/.atom/packages/\n\nVersion 0.2.x switches to using regular expressions to identify open/closed HTML elements.\n\n# Issues\n\nThis is still in development, so it might occasionally complete the tag wrong, or \"fix\" a tag on your line that doesn't need to be fixed. Please let me know of any issues you run into and I will fix them!\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/j4ys0n/atom-html-helper/issues"
+  },
+  "homepage": "https://github.com/j4ys0n/atom-html-helper",
+  "_id": "html-helper@0.2.3",
+  "dist": {
+    "shasum": "0708a63933c38327c8e979074ea8708450243666"
+  },
+  "_resolved": "/var/folders/gc/vy956zrs6m7_vw6xvft97bkw0000gn/T/d-114712-39524-192iaol/package.tgz",
+  "_from": "/var/folders/gc/vy956zrs6m7_vw6xvft97bkw0000gn/T/d-114712-39524-192iaol/package.tgz"
+}
